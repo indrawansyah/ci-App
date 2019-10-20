@@ -20,7 +20,12 @@ class Mahasiswa_model extends CI_Model
 
     public function hapusDataMahasiswa($id)
     {
-        $this->db->where('id', $id);
-        $this->db->delete('mahasiswa');
+        // $this->db->where('id', $id);
+        $this->db->delete('mahasiswa', ['id']);
+    }
+
+    public function getMahasiswaById()
+    {
+       return $this->db->get_where('mahasiswa', ['id'])->row_array();
     }
 }
