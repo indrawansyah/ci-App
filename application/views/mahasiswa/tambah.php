@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-6">
                 <h3>Form Tambah Data Mahasiswa</h3>
                 <form method="post" action="<?= base_url('mahasiswa/tambah'); ?>">

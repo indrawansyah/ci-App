@@ -12,10 +12,10 @@
   </head>
   <body>
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row mt-3">
+            <div class="col-md-6">
                 <h3>Daftar Mahasiswa</h3>
-                <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-primary mb-3">Tambah Data</a>
+                <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-primary mb-3">Tambah Data Mahasiswa</a>
                 <table class="table">
   <thead>
     <tr>
