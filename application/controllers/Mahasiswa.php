@@ -48,6 +48,7 @@ class Mahasiswa extends CI_Controller {
 
 		// $this->db->insert('mahasiswa', $data);
 		$this->Mahasiswa_model->tambahDataMahasiswa();
+		$this->session->set_flashdata('flash', 'Ditambahkan');
 		redirect('mahasiswa/index');
 
 		}
