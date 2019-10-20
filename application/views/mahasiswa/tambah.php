@@ -14,12 +14,20 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-6">
-                <h3>Form Tambah Data Mahasiswa</h3>
-                <form method="post" action="<?= base_url('mahasiswa/tambah'); ?>">
-            <div class="form-group">
-            <label for="nama">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
-            <!-- <?= form_error['nama']; ?> -->
+
+            <div class="card">
+              <div class="card-header">
+                Form Tambah Data Mahasiswa
+              </div>
+              <div class="card-body">
+                  
+                    <form method="post" action="<?= base_url('mahasiswa/tambah'); ?>">
+                <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama">
+
+
+
 
         </div>
         <div class="form-group">
@@ -36,9 +44,11 @@
         </div>
         <button type="submit" class="btn btn-primary">Tambah Data</button>
 
-                </form>
+           </form>
           </div>
-        </div>
+         </div>
+       </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
