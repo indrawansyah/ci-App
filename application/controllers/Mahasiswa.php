@@ -6,6 +6,7 @@ class Mahasiswa extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Mahasiswa_model');
+		
 
 	}
 
@@ -26,21 +27,27 @@ class Mahasiswa extends CI_Controller {
 
 		$this->load->library('form_validation');
 		$this->load->model('Mahasiswa_model');
+	
 
-		$this->form_validation->set_rules('nama', 'Nama', 'required| min_length[3]');
+		$this->form_validation->set_rules('nama', 'Nama', 'required');
+		$this->form_validation->set_rules('nrp', 'NRP', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
-		if($this->form_validation->run() === false) {
-
+		if($this->form_validation->run() == FALSE) {
+			$this->load->view('templates/header');
 			$this->load->view('mahasiswa/tambah');
+			$this->load->view('templates/footer');
 		} else {
-			$data = [
-			'nama' => $this->input->post('nama'),
-			'nrp' => $this->input->post('nrp'),
-			'email' => $this->input->post('email'),
-			'jurusan' => $this->input->post('jurusan')
-		];
+			
+		// 	$data = [
+		// 	'nama' => $this->input->post('nama'),
+		// 	'nrp' => $this->input->post('nrp'),
+		// 	'email' => $this->input->post('email'),
+		// 	'jurusan' => $this->input->post('jurusan')
+		// ];
 
-		$this->db->insert('mahasiswa', $data);
+		// $this->db->insert('mahasiswa', $data);
+		$this->Mahasiswa_model->tambahDataMahasiswa();
 		redirect('mahasiswa/index');
 
 		}
