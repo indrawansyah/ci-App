@@ -15,7 +15,12 @@ class Mahasiswa_model extends CI_Model
             "jurusan" => $this->input->post('jurusan', true)
         ];
 
-        $this->db->insert('mahasiswa', $data);
-       
+        $this->db->insert('mahasiswa', $data);  
     }   
+
+    public function hapusDataMahasiswa($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('mahasiswa');
+    }
 }

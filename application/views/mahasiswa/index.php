@@ -51,7 +51,7 @@
       <td><?= $mhs['jurusan'];?></td>
       <td>
       <a href="" class="badge badge-success">ubah</a>
-      <a href="" class="badge badge-danger">hapus</a>
+      <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-danger" onclick="return confirm('yakin ?');">hapus</a>
       </td>
 
     </tr>
