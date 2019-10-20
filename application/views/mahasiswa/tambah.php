@@ -26,23 +26,28 @@
                 <label for="nama">Nama</label>
                 <input type="text" class="form-control" id="nama" name="nama">
 
-
-
-
         </div>
         <div class="form-group">
             <label for="nrp">Nrp</label>
-            <input type="text" class="form-control" id="Nrp" name="Nrp">
+            <input type="number" class="form-control" id="Nrp" name="Nrp">
         </div>
+
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" class="form-control" id="email" name="email">
         </div>
-        <div class="form-group">
-            <label for="jurusan">Jurusan</label>
-            <input type="text" class="form-control" id="jurusan" name="jurusan">
+              <div class="form-group">
+          <label for="jurusan">Jurusan</label>
+          <select class="form-control" id="jurusan" name="jurusan">
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Teknik Industri">Teknik Industri</option>
+          <option value="Teknik Pangan">Teknik Pangan</option>
+          <option value="Teknik Mesin">Teknik Mesin</option>
+          <option value="Teknik Planologi">Teknik Planologi</option>
+          <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+          </select>
         </div>
-        <button type="submit" class="btn btn-primary">Tambah Data</button>
+        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data</button>
 
            </form>
           </div>
