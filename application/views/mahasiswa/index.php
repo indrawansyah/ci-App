@@ -14,10 +14,24 @@
     <div class="container">
         <div class="row mt-3">
             <div class="col-md-6">
+              <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-primary mb-3">Tambah Data Mahasiswa</a>
+              <table class="table">
+                
+                <div class="row ">
+                  <div class="col-md-6">
+                    <form action="" method="post">
+                    <div class="input-group mb-2">
+                      <input type="text" class="form-control" placeholder="Cari data mahasiswa.." name="keyword">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" >Cari</button>
+                      </div>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+                
                 <h3>Daftar Mahasiswa</h3>
-                <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-primary mb-3">Tambah Data Mahasiswa</a>
-                <table class="table">
-  <thead>
+    <thead>
       <?php if($this->session->flashdata('flash') ) : ?>
         <div class="row mt-3">
           <div class="col-md-6">
