@@ -31,6 +31,11 @@
                 </div>
                 
                 <h3>Daftar Mahasiswa</h3>
+                <?php if (empty($mahasiswa) ) : ?>
+                  <div class="alert alert-danger" role="alert">
+                   data mahasiswa tidak ditemukan.
+                  </div>
+                <?php endif ; ?>
     <thead>
       <?php if($this->session->flashdata('flash') ) : ?>
         <div class="row mt-3">
