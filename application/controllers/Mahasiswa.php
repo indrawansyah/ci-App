@@ -7,6 +7,7 @@ class Mahasiswa extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Mahasiswa_model');
 		
+		$this->load->library('form_validation');
 
 	}
 
@@ -74,9 +75,6 @@ class Mahasiswa extends CI_Controller {
 	public function ubah($id)
 	{
 
-		$this->load->library('form_validation');
-		$this->load->model('Mahasiswa_model');
-
 		$data['judul'] = 'Form Ubah Data Mahasiswa';
 		$data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
 		$data['jurusan'] = ['Teknik Informatika', 'Teknik Mesin', 'Teknik Planologi', 'Teknik Pangan', 'Teknik Lingkungan'];
@@ -86,9 +84,9 @@ class Mahasiswa extends CI_Controller {
 		$this->form_validation->set_rules('nrp', 'NRP', 'required');
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
-		if($this->form_validation->run() == FALSE) {
+		if($this->form_validation->run() == false) {
 			$this->load->view('templates/header', $data);
-			$this->load->view('mahasiswa/ubah');
+			$this->load->view('mahasiswa/ubah', $data);
 			$this->load->view('templates/footer');
 		} else {
 
