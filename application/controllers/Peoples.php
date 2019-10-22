@@ -7,9 +7,21 @@ class Peoples extends CI_Controller {
 	{
         $data['judul'] = 'List of Peoples';
 
-        $this->load->model('Peoples_model', 'peoples');
+		$this->load->model('Peoples_model', 'peoples');
+		
+		//load library
+		$this->load->library('pagination');
 
-        $data['peoples'] = $this->peoples->getPeoples(12, 31);
+		//config
+		$config['base_url'] = 'http://localhost/ci-app/peoples/index';
+		$config['total_rows'] = $this->peoples->countAllPeoples();
+		$config['per_page'] = 12;
+
+		//initialize
+		$this->pagination->initialize($config); 
+
+		$data['start'] = $this->uri->segment(3);
+		$data['peoples'] = $this->peoples->getPeoples($config['per_page'], $data['start']);
         
 		$this->load->view('templates/header', $data);
 		$this->load->view('peoples/index', $data);
@@ -18,5 +30,5 @@ class Peoples extends CI_Controller {
 
 
 	
-}
+} 
 
