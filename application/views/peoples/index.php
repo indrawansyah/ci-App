@@ -14,16 +14,19 @@
                     </tr>
                 </thead>
               <tbody>
+                  <?php $i = 1;
+                   foreach( $peoples as $people ) : ?>
                   <tr>
-                      <th>1</th>
-                      <td>Indrawansyah</td>
-                      <td>Indrawansyah@mail.unpas.ac.id</td>
+                      <th><?= $i++; ?></th>
+                      <td><?= $people['name'];?></td>
+                      <td><?= $people['email'];?></td>
                       <td>
                           <a href="" class="badge badge-warning">detail</a>
                           <a href="" class="badge badge-success">edit</a>
                           <a href="" class="badge badge-danger">delete</a>
                       </td>
                   </tr>
+                <?php endforeach; ?>
               </tbody>  
             </table>
 
