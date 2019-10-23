@@ -15,7 +15,8 @@
     </div>
 
         <div class="row">
-        <div class="col-md-10">
+        <div class="col-md">
+        <h5>Results : <?= $total_rows; ?></h5>
             <table class="table">
                 <thead>
                     <tr>
