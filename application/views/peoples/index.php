@@ -27,8 +27,16 @@
                     </tr>
                 </thead>
               <tbody>
-                  <?php 
-                   foreach( $peoples as $people ) : ?>
+                <?php if(empty($peoples)) : ?>
+                <tr>
+                    <td colspan="4">
+                        <div class="alert alert-danger" role="alert">
+                    data not found!
+                        </div>
+                    </td>
+                </tr>
+                <?php endif; ?>
+                  <?php foreach( $peoples as $people ) : ?>
                   <tr>
                       <th><?= ++$start; ?></th>
                       <td><?= $people['name'];?></td>
