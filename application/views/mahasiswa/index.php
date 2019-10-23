@@ -70,7 +70,7 @@
       <td><?= $mhs['email'];?></td>
       <td><?= $mhs['jurusan'];?></td>
       <td>
-      <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-danger" onclick="return confirm('yakin ?');">hapus</a>
+      <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-danger tombol-hapus">hapus</a>
       <a href="<?= base_url(); ?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success">ubah</a>
       <a href="<?= base_url(); ?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-primary">detail</a>
       </td>
