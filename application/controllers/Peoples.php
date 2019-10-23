@@ -16,10 +16,11 @@ class Peoples extends CI_Controller {
 		$config['base_url'] = 'http://localhost/ci-app/peoples/index';
 		$config['total_rows'] = $this->peoples->countAllPeoples();
 		$config['per_page'] = 12;
+		$config['num_links'] = 5;
 
 		//styling
 
-		$config['full_tag_open'] = '<nav><ul class="pagination">';
+		$config['full_tag_open'] = '<nav><ul class="pagination justify-content-center">';
 		$config['full_tag_close'] = '</ul></nav>';
 
 		$config['first_link'] = 'First';
